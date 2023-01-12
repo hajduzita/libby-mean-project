@@ -1,0 +1,68 @@
+
+.wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid: auto/ 1fr;
+  padding: 100px 30px;
+  background: #F4F4F4;
+  border: none;
+  border-radius: 40px;
+  box-shadow: -3px -3px 7px #ffffff, 5px 5px 5px rgba(94, 104, 121, .288);
+
+
+  h1 {
+    font-family: 'Dancing Script', sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    color: #252525;
+    text-align: center;
+    padding-bottom: 15px;
+  }
+
+  .register {
+    text-align: center;
+    font-size: 16px;
+    padding-bottom: 40px;
+  }
+
+  form {
+    display: grid;
+    grid: auto/ 1fr;
+
+    button {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+  }
+
+  a {
+    text-decoration: none;
+    color: #C6DE46;
+    font-weight: 700;
+  }
+
+  a:hover {
+    color: darken(#C6DE46, 10%);
+  }
+
+  
+}
+
+footer {
+  position: absolute;
+  top: 99%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #C6DE46;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  p {
+    font-size: 10px;
+  }
+}

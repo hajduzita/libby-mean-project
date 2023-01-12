@@ -1,0 +1,17 @@
+<section class="wrap">
+  <h1>Libby</h1>
+  <p class="slogan">Read. Collect. Share.</p>
+  <form [formGroup]="signInForm" (submit)="onSignIn()">
+    <label>E-mail</label>
+    <input type="email" formControlName="email" autocomplete="on">
+    <label>Password</label>
+    <input type="password" formControlName="password">
+    <button type="submit">Login</button>
+  </form>
+  <div class="register">
+    <p>Wanna be a member? <a [routerLink]="['/auth/sign-up']">Register!</a></p>
+  </div>
+</section>
+<footer>
+  <p>Hajdu Zita &copy; 2023</p>
+</footer>

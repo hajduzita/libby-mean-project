@@ -1,0 +1,15 @@
+<section class="wrap">
+  <h1>Libby</h1>
+  <p class="register">Registration</p>
+  <form [formGroup]="signUpForm" (submit)="onSignUp()">
+    <label>E-mail</label>
+    <input type="email" formControlName="email">
+    <label>Password</label>
+    <input type="password" formControlName="password">
+    <button type="submit">Registration</button>
+    <p> <a [routerLink]="['/auth/sign-in']">Back to login</a></p>
+  </form>
+</section>
+<footer>
+  <p>Hajdu Zita &copy; 2023</p>
+</footer>

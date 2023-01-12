@@ -1,0 +1,31 @@
+<main>
+  <app-nav></app-nav>
+  <div class="container">
+    <div class="new-quote">
+      <button><a [routerLink]="['/', 'quotes', 'create']">Add new quote</a></button>
+      <input type="text" placeholder="Search...">
+    </div>
+    <li *ngFor="let quote of quotes">
+      <p>{{ quote.author }} - {{ quote.bookTitle | uppercase }}</p>
+      <p>"{{ quote.quote }}"</p>
+      <p>{{ quote.publisher}}, ({{ quote.publishYear}}), page {{ quote.page }}</p>
+      <p>{{ quote.creator }}</p>
+      <!-- <p>{{ userId }}</p> -->
+      <button
+        *ngIf="userId === quote.creator"
+        type="button"
+        (click)="onOpenEdit(quote._id)">Edit</button>
+      <button
+        *ngIf="userId === quote.creator"
+        type="button"
+        (click)="onDeleteQuote(quote._id)">Delete</button>
+    </li>
+    
+  </div>
+</main>
+
+<!-- Search filter example -->
+<!--<input type="text" [(ngModel)]="searchString">
+<ul>
+  <li *ngFor="let item of list | filter:searchString">{{ item }}</li>
+</ul>-->

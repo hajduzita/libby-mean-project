@@ -1,0 +1,17 @@
+<h3>Edit quote</h3>
+<form [formGroup]="form" (submit)="onUpdateQuotes()">
+  <label>Author</label>
+  <input type="text" formControlName="author">
+  <label>Book title</label>
+  <input type="text" formControlName="bookTitle">
+  <label>Quote</label>
+  <textarea cols="50" rows="10" formControlName="quote"></textarea>
+  <label>Page</label>
+  <input type="number" formControlName="page">
+  <label>Publisher</label>
+  <input type="text" formControlName="publisher">
+  <label>Year of published</label>
+  <input type="text" formControlName="publishYear">
+  <button type="submit">Update</button>
+</form>
+<a [routerLink]="['/', 'quotes']">Back to the list</a>

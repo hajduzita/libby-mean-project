@@ -1,0 +1,13 @@
+<nav>
+  <ul>
+    <h1>Libby</h1>
+    <hr>
+    <a *ngIf="isUserAuth" [routerLink]="['/', 'quotes']" [routerLinkActive]="['is-active']">Quotes</a>
+    <a *ngIf="isUserAuth" [routerLink]="['/', 'books']" [routerLinkActive]="['is-active']">Books</a>
+    <a *ngIf="isUserAuth" [routerLink]="['/', 'books']" [routerLinkActive]="['is-active']">Statistics</a>
+    <a *ngIf="isUserAuth" [routerLink]="['/', 'books']" [routerLinkActive]="['is-active']">Challanges</a>
+    <a *ngIf="!isUserAuth" [routerLink]="['/', 'auth', 'sign-in']">Sign in</a>
+    <a *ngIf="!isUserAuth" [routerLink]="['/', 'auth', 'sign-up']">Sign up</a>
+    <a *ngIf="isUserAuth" (click)="onLogout()">Logout</a>
+  </ul>
+</nav>
